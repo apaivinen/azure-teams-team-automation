@@ -8,3 +8,13 @@ AVM Site: https://aka.ms/AVM
 AVM Github: https://github.com/Azure/bicep-registry-modules
 
 
+# Deployment
+
+```powershell
+# Login az cli
+az login
+
+# Deploy resources
+az deployment sub create -n "az-teamsResources-$(Get-Date -Format "yyyyMMddHHmmss")" -l westeurope -f ./main.bicep -p ./main.bicepparam
+
+```
